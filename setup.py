@@ -5,17 +5,19 @@ try:
 except ImportError:
   from distutils.core import setup
 
-import pyunicode
+version = '0.0.2'
 
 setup(
   name='pyunicode',
-  version=pyunicode.__version__,
+  version=version,
   url='http://github.com/Pixelapse/pyunicode',
+  download_url='https://github.com/Pixelapse/pyunicode/tarball/v%s' % version,
   author='Shravan Reddy',
   author_email='shravan@pixelapse.com',
   maintainer='Pixelapse',
   maintainer_email='hello@pixelapse.com',
   packages=find_packages(),
+  description='Library to deal with common python unicode handling issues',
   long_description=open('README.md').read(),
   license=open('LICENSE').read()
 )
